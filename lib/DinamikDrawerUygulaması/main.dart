@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/DinamikDrawerUygulamas%C4%B1/dinamikdraweuygulama.dart';
 import 'package:myapp/DinamikDrawerUygulamas%C4%B1/loginview.dart';
-import 'package:myapp/discover.dart';
 //import 'package:myapp/login.dart';
-import 'homepage.dart';
-import 'ayarlar.dart';
-import 'giris.dart';
-import 'kesfet.dart';
-import 'Deneme/deneme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,12 +27,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginView(),
         '/dinamikDrawer': (context) => DinamikDrawerUygulama(),
-
-        // '/giris': (context) => Giris(),
-        // '/ayarlar': (context) => Ayarlar(baslik: 'Ayar Sayfası'),
-        // '/Kesfet': (context) => Kesfet(),
-        // '/Discover': (context) => Discover(),
-        // '/Deneme': (context) => Deneme(),
         // '/AnaEkran': (context) => AnaEkran(),
       },
     );

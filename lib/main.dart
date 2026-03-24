@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/BottomNavigationUygulamasi/mainlayoutview.dart';
 import 'package:myapp/DinamikDrawerUygulamas%C4%B1/dinamikdraweuygulama.dart';
 import 'package:myapp/DinamikDrawerUygulamas%C4%B1/loginview.dart';
 import 'package:myapp/discover.dart';
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget {
       //home: const LoginPage(),
       initialRoute: '/', // Uygulama açıldığında hangi sayfa gelsin
       routes: {
-        '/': (context) => LoginView(),
+        '/': (context) => MainLayoutView(),
         '/dinamikDrawer': (context) => DinamikDrawerUygulama(),
+        '/BottomNavigationUygulaması': (context) => MainLayoutView()
 
         // '/giris': (context) => Giris(),
         // '/ayarlar': (context) => Ayarlar(baslik: 'Ayar Sayfası'),

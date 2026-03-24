@@ -13,7 +13,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Login Sayfas")),
+      appBar: AppBar(title: const Text("Login Sayfası")),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(

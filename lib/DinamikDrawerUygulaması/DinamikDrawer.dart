@@ -31,11 +31,27 @@ class Dinamikdrawer extends StatelessWidget {
           for (var route in routes)
             ListTile(
               leading: Icon(Icons.route),
-              title: Text(route.name),
+              title: RichText(
+                text: TextSpan(
+                  style: DefaultTextStyle.of(context).style,
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'rota: ',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    TextSpan(text: '${route.route}\n'),
+                    TextSpan(
+                      text: 'isim: ',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    TextSpan(text: route.name),
+                  ],
+                ),
+              ),
               style: ListTileStyle.drawer,
               onTap: () {
                 // Navigator.pushNamed(context, route.route);
-                print("Navigating to ${route.route}");
+                Text("Navigating to ${route.route}");
               },
             ),
         ],

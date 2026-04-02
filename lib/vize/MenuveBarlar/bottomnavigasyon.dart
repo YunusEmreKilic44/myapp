@@ -19,7 +19,7 @@ class BottomNavigasyon extends StatefulWidget {
 class _BottomNavigasyonState extends State<BottomNavigasyon> {
   int _selectedIndex = 0;
 
-  void _Onitemtapped(int index) {
+  void Itemtiklandi(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -36,7 +36,7 @@ class _BottomNavigasyonState extends State<BottomNavigasyon> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         unselectedItemColor: Colors.grey,
-        onTap: _Onitemtapped,
+        onTap: Itemtiklandi,
       ),
     );
   }

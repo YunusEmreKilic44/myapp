@@ -18,7 +18,7 @@ class _AnaDuzenState extends State<AnaDuzen> {
 
   final List<String> _pageTitles = ['Kurslar', 'Takvim', 'Profil'];
 
-  void _Onitemtapped(int index) {
+  void Itemtiklandi(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -43,7 +43,7 @@ class _AnaDuzenState extends State<AnaDuzen> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         unselectedItemColor: Colors.grey,
-        onTap: _Onitemtapped,
+        onTap: Itemtiklandi,
       ),
     );
   }

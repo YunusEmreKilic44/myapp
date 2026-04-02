@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/BottomNavigationUygulamasi/mainlayoutview.dart';
-import 'package:myapp/DinamikDrawerUygulamas%C4%B1/dinamikdraweuygulama.dart';
-import 'package:myapp/DinamikDrawerUygulamas%C4%B1/loginview.dart';
-import 'package:myapp/discover.dart';
-//import 'package:myapp/login.dart';
-import 'homepage.dart';
-import 'ayarlar.dart';
-import 'giris.dart';
-import 'kesfet.dart';
-import 'Deneme/deneme.dart';
+import 'package:myapp/vize/AnaDuzen/anaduzen.dart';
+import 'package:myapp/vize/Ekranlar/Ayarlar/ayarlarsayfasi.dart';
+import 'package:myapp/vize/Ekranlar/Profil/profil.dart';
+import 'package:myapp/vize/Ekranlar/Takvim/takvim.dart';
+import 'package:myapp/vize/KartlarveModeller/kurssayfasi.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,32 +11,20 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        //        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.cyanAccent),
-      ),
-
-      //      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      //      home: const Kesfet(),
-      // home: const Discover(),
-      //home: const LoginPage(),
-      initialRoute: '/', // Uygulama açıldığında hangi sayfa gelsin
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/',
       routes: {
-        '/': (context) => MainLayoutView(),
-        '/dinamikDrawer': (context) => DinamikDrawerUygulama(),
-        '/BottomNavigationUygulaması': (context) => MainLayoutView()
+        '/': (context) => const AnaDuzen(),
+        '/kurslar': (context) => KursSayfasi(),
+        '/takvim': (context) => const Takvim(),
+        '/profil': (context) => const Profil(),
 
-        // '/giris': (context) => Giris(),
-        // '/ayarlar': (context) => Ayarlar(baslik: 'Ayar Sayfası'),
-        // '/Kesfet': (context) => Kesfet(),
-        // '/Discover': (context) => Discover(),
-        // '/Deneme': (context) => Deneme(),
-        // '/AnaEkran': (context) => AnaEkran(),
+        '/ayarlar': (context) => AyarlarSayfasi(),
       },
     );
   }
